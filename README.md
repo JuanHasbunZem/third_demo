@@ -2,7 +2,7 @@
 
 #### A web applipication page that prompts the user to enter a number, which is then taken by the app and looks through it, replacing any instances of 1, 2, or 3, with a different phrase before outputting a count from 0 to the user inputted number.
 
-#### Juan Hasbun
+#### Created by: Juan Hasbun
 
 ## Technologies Used
 
@@ -43,7 +43,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Contact Information
 
-[Juan Hasbun](zemenareq@hotmail.com)
+Email at: [Juan Hasbun](<zemenareq@hotmail.com>)
 
 ## Tests
 
