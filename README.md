@@ -45,7 +45,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Email at: <zemenareq@hotmail.com>
 
-## Tests
+## Plan
 
 Initial "blueprint" before creating tests:
 
@@ -58,3 +58,49 @@ Initial "blueprint" before creating tests:
   * If a 2, replace with "Boop!"
   * If a 1, replace with "Beep!"
 * Outputs entire array.
+
+## Tests
+```
+Describe: isNumber()
+  Test: "It will return true if user input is a number."
+  Expect(isNumber(5)).toEqual(true);
+
+  Test: "It will return false if user input is not a number."
+  Expect(isNumber('string').toEqual(false);
+
+Describe: isThree()
+  Test: "It will return true if user input is a 3."
+  Expect(isThree(3).toEqual(true);
+
+  Test: "If true, will replace element with "Won't you be my neighbor?""
+  Expect(array.push(isThree(true)));
+
+  Test: "It will return false if user input is not a 3."
+  Expect(isThree(2).toEqual(false);
+    Test: "If false, will call next loop."
+    Expect(isThree(2).toEqual(false)).call(isTwo());
+
+Describe: isTwo()
+  Test: "It will return true if user input is a 2."
+  Expect(isTwo(2).toEqual(true);
+
+  Test: "If true, will replace element with "Boop!""
+  Expect(array.push(isTwo(true)));
+
+  Test: "It will return false if user input is not a 2."
+  Expect(isTwo(3).toEqual(false);
+    Test: "If false, will call next loop."
+    Expect(isTwo(1).toEqual(false)).call(isOne());
+
+Describe: isOne()
+  Test: "It will return true if user input is a 1."
+  Expect(isOne(1).toEqual(true);
+
+  Test: "If true, will replace element with "Beep!""
+  Expect(array.push(isOne(true)));
+
+  Test: "It will return false if user input is not a 1."
+  Expect(isOne(5).toEqual(false);
+    Test: "If false, will proceed to next element"
+    _# Not sure how to write this one out #_
+```
