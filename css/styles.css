@@ -3,3 +3,11 @@ body {
   background-color: black;
   color: white;
 }
+
+img {
+  scale: 75%;
+}
+
+#heading {
+  text-align: center;
+}
