@@ -15,6 +15,7 @@
         <!--Artwork by koyote974 of deviantart, at https://www.deviantart.com/koyote974/art/AGDQ2014-Chrono-Trigger-Robo-426389384 -->
         <p> Hello Neighbor. I am Mr. Roboger. Please enter your name and a number for a special Mr. Roboger welcome.</p>
       </div>
+      <div id="forms">
         <form id="formOne">
           <div class="form-group">
             <label for="userName">Your name:</label>
@@ -24,8 +25,18 @@
             <label for="userNumber">A number:</label>
             <input id="userNumber" class="form-control" type="text">
           </div>
+          <button type="submit" class="btn-success">Submit Data</button>
+        </form>
+      </div>
+    </div>
 
-
-
+    <div id="welcome">
+      <h1>Welcome, <span class="userName"></span>! Your special Mr. Robo welcome is:</h1>
+      <br>
+      <img src="img/robo.png">
+      <p>Thank you for visiting my neighborhood, I hope to see you again real soon.</p>
+      <br>
+      <button type="reset" class="btn-primary" id="restart">Restart.</button>
+    </div>
   </body>
 </html>
