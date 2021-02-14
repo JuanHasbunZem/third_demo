@@ -29,7 +29,8 @@ Alternatively, follow this link: [Third Demo](https://github.com/JuanHasbunZem/t
 
 ## Known Bugs
 
-* None at this time.
+* isThree loop only works up to a user Input of 40. Any numbers beyond do not get sorted (i.e - 42 doesnt get replaced with Boop!). 
+  * Possible solution: May need to use a .replace regex, or maybe trying toying with the .split command to split each element and test from there.
 
 ## License
 
