@@ -11,3 +11,13 @@ img {
 #heading {
   text-align: center;
 }
+
+#forms {
+  font-family: fantasy;
+  color: red;
+}
+
+#welcome {
+  display: none;
+  text-align: center;
+}
