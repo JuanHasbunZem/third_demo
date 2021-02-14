@@ -14,10 +14,16 @@ img {
 
 #forms {
   font-family: fantasy;
-  color: red;
+  color: green;
 }
 
 #welcome {
   display: none;
   text-align: center;
+}
+
+#error {
+  display: none;
+  text-align: center;
+  color: red;
 }
