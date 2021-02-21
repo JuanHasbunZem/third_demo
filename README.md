@@ -4,6 +4,8 @@
 
 #### Created by: Juan Hasbun
 
+### Last updated: 2/20/2021
+
 ## Technologies Used
 
 * Github
@@ -20,6 +22,8 @@
 
 This program will first prompt the user to enter a number (outputting an error if not an actual number), stores it into an array, the array will then go through a function to add more elements into it starting from 0 counting up to the users number. It will then go through another function that looks for instances of 1, 2, or 3, and replaces that element of the array with a "Beep!", "Boop!", "Won't you be my neighbor?". And finally it will out put the entire new array for the user to see.
 
+Additionally, the artwork used was taken from koyote974 of deviantart, at https://www.deviantart.com/koyote974/art/AGDQ2014-Chrono-Trigger-Robo-426389384
+
 ## Setup/Installation Requirements
 
 Using your Github account, go to your Gitbash terminal and use the: $git clone https://github.com/JuanHasZem/third_demo command to download a copy of the files used for this project. Then open the file labeled index.html to open the website and test the page out.
@@ -29,8 +33,10 @@ Alternatively, follow this link: [Third Demo](https://github.com/JuanHasbunZem/t
 
 ## Known Bugs
 
-* isThree loop only works up to a user Input of 40. Any numbers beyond do not get sorted (i.e - 42 doesnt get replaced with Boop!). 
-  * Possible solution: May need to use a .replace regex, or maybe trying toying with the .split command to split each element and test from there.
+* <s>isThree loop only works up to a user Input of 40. Any numbers beyond do not get sorted (i.e - 42 doesnt get replaced with Boop!). 
+  * Possible solution: May need to use a .replace regex, or maybe trying toying with the .split command to split each element and test from there.</s>
+
+  As of 2/20/2021, the known bug was fixed with changes made to the makeArray() function that combines the previous functions makeArray and isThree.
 
 ## License
 
@@ -48,7 +54,7 @@ Email at: <zemenareq@hotmail.com>
 
 ## Plan
 
-Initial "blueprint" before creating tests:
+Initial "blueprint" before creating tests (changes may/will occur):
 
 * Prompt user for a number.
   * _I may need to add an initializer here so I can have an empty array each time the user inputs a number - to avoid refreshing the page._
@@ -69,39 +75,35 @@ Describe: isNumber()
   Test: "It will return false if user input is not a number."
   Expect(isNumber('string').toEqual(false);
 
-Describe: isThree()
+Describe: makeArray()
+  Test: "Will create an Array with length = to user input."
+  Expect(makeArray(5) === [0,1,2,3,4,5]);
+
+*Following Test was originally part of the now commented out isThree function, but incorporated into makeArray().*
+
   Test: "It will return true if user input is a 3."
-  Expect(isThree(3).toEqual(true);
+  Expect(makeArray(3).toEqual(true);
 
   Test: "If true, will replace element with "Won't you be my neighbor?""
-  Expect(array.push(isThree(true)));
+  Expect: makeArray(3).toEqual("0, Beep!, Boop!, Won't you be my neighbor?");
 
-  Test: "It will return false if user input is not a 3."
-  Expect(isThree(2).toEqual(false);
-    Test: "If false, will call next loop."
-    Expect(isThree(2).toEqual(false)).call(isTwo());
+  Test: "If false, move on to next check"
+  *Not sure how to write the Expectation for this.
 
-Describe: isTwo()
-  Test: "It will return true if user input is a 2."
-  Expect(isTwo(2).toEqual(true);
+    Test: "It will return true if user input is a 2."
+    Expect(makeArray(2).toEqual(true));
 
-  Test: "If true, will replace element with "Boop!""
-  Expect(array.push(isTwo(true)));
+    Test: "Will replace instances of 2 with " Boop!"
+    makeArray(2).toEqual("0, Beep!, Boop!");
 
-  Test: "It will return false if user input is not a 2."
-  Expect(isTwo(3).toEqual(false);
-    Test: "If false, will call next loop."
-    Expect(isTwo(1).toEqual(false)).call(isOne());
+    Test: "If false, move on to next check"
 
-Describe: isOne()
-  Test: "It will return true if user input is a 1."
-  Expect(isOne(1).toEqual(true);
+      Test: "It will return true if user input is a 1"
+      Expect(makeArray(1).toEqual(true));
 
-  Test: "If true, will replace element with "Beep!""
-  Expect(array.push(isOne(true)));
+      Test: "It will replace instaces of 1 with a " Beep!"
+      makeArray(1).toEqual("0, Beep!");
 
-  Test: "It will return false if user input is not a 1."
-  Expect(isOne(5).toEqual(false);
-    Test: "If false, will proceed to next element"
-    _# Not sure how to write this one out #_
+      Test: "If false, keeps current number the same"
+      makeArray(4).toEqual("0, Beep!, Boop!, Won't you be my neighbor?, 4");
 ```

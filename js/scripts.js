@@ -9,14 +9,22 @@ function isNumber(numInput) {
 
 function makeArray(numInput) {
   let numArray = [];
-  let counter = 0;
   for (i=0; i <= numInput; i++) {
-    numArray.push(counter);
-    counter ++;
-  }
+    let counter = i.toString()
+    if (counter.includes('3')) {
+      numArray.push("Won't you be my neighbor?");
+    } else if (counter.includes('2')) {
+      numArray.push(" Boop!");
+    } else if (counter.includes('1')) {
+      numArray.push(" Beep!");
+    } else {
+      numArray.push(counter);
+    };
+  };
   return numArray;
 };
 
+/* old isThree function, commenting out in event I ever want to re-use this bit of code
 function isThree(numArray) {
   const threeArray = numArray.map(function(element) {
     if (element === 3 || element === 13 || element === 23 || element >= 30 && element <= 39) {
@@ -34,7 +42,7 @@ function isThree(numArray) {
     }
   });
   return threeArray;
-};
+}; */
 
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
@@ -44,7 +52,8 @@ $(document).ready(function() {
     const numInput = $("input#userNumber").val();
     if (isNumber(numInput) === true) {
       $(".userName").text(nameInput);
-      const threeArray = isThree(makeArray(numInput));
+      //const threeArray = isThree(makeArray(numInput));
+      const threeArray = makeArray(numInput);
       console.log(makeArray(numInput));
       $(".userNumber").text(threeArray);
       console.log(threeArray);
